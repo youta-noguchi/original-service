@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="text-center">
-        <h1>ログイン</h1>
+        <h1>管理者用ログイン</h1>
     </div>
 
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
 
-            {{ Form::open(['route' => 'login.post']) }}
+            {!! Form::open(['route' => 'seller.authenticate']) !!}
                 <div class="form-group">
                     {!! Form::label('email', 'Email') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
@@ -22,8 +22,6 @@
                 {!! Form::submit('ログインして管理画面へ', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
             
-            {{-- ユーザ登録ページへのリンク --}}
-            <p class="mt-2">New user? {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
         </div>
     </div>
 @endsection

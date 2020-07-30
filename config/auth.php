@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'seller', // webから変更
         'passwords' => 'users',
     ],
 
@@ -40,11 +40,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
+        
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
+        ],
+        
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+        //　追加
+        'seller' => [
+            'driver' => 'session',
+            'provider' => 'sellers',
         ],
     ],
 
@@ -69,6 +79,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        
+         'sellers' => [ //追加
+            'driver' => 'eloquent', //追加
+            'model' => App\Seller::class, //追加
         ],
 
         // 'users' => [
@@ -98,6 +113,12 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+        ],
+        
+        'sellers' => [ //追加
+            'provider' => 'sellers', //追加
+            'table' => 'password_resets', //追加
+            'expire' => 60, //追加
         ],
     ],
 
