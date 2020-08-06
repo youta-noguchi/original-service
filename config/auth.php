@@ -15,7 +15,7 @@ return [
     
     
     'defaults' => [
-        'guard' => 'seller', // webから変更
+        'guard' => 'user', // webから変更
         'passwords' => 'users',
     ],
     
