@@ -37,4 +37,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    // このユーザがもつオーダー(Orderモデルとの関係を定義、(一対多))
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+    
+    // このユーザに関係するモデルの件数をロード
+    public function loadRelationshipCounts()
+    {
+        $this->loadCount('orders');
+    }
 }

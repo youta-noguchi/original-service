@@ -15,6 +15,13 @@
         {{--　エラーメッセージ　--}}
         @include('commons.error_messages')
         
+        {{-- カート追加のメッセージ --}}
+        @if (session()->has('message'))
+            <div class="alert alert-info">
+                {{ session('message') }}
+            </div>
+        @endif
+        
         @yield('content')
     </div>
     

@@ -18,6 +18,16 @@
                     {!! Form::label('email', 'メールアドレス') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                 </div>
+                
+                <div class="form-group">
+                    {!! Form::label('address', '住所') !!}
+                    {!! Form::text('address', old('address'), ['class' => 'form-control']) !!}
+                </div>
+                
+                <div class="form-group">
+                    {!! Form::label('phone', '電話番号') !!}
+                    {!! Form::text('phone', old('phone'), ['class' => 'form-control']) !!}
+                </div>
 
                 <div class="form-group">
                     {!! Form::label('password', 'パスワード') !!}
@@ -29,7 +39,7 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
-                {!! Form::submit('管理者新規登録', ['class' => 'btn btn-primary btn-block']) !!}
+                {!! Form::submit('ユーザ新規登録', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
         </div>
     </div>

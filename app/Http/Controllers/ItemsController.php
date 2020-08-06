@@ -63,7 +63,7 @@ class ItemsController extends Controller
         $item->save();
         
         // 商品管理画面へリダイレクトさせる
-        return redirect('items');
+        return redirect('seller/items');
     }
 
     /**
@@ -129,7 +129,7 @@ class ItemsController extends Controller
         $item->save();
         
         // 商品管理画面へリダイレクトさせる
-        return redirect('items');
+        return redirect('seller/items');
     }
 
     /**
@@ -147,6 +147,7 @@ class ItemsController extends Controller
         $item->delete();
 
         // 商品管理ページへリダイレクトさせる
-        return redirect('items');
+        return redirect('seller/items');
     }
+    
 }

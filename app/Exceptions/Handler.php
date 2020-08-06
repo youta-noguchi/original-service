@@ -60,6 +60,8 @@ class Handler extends ExceptionHandler
     {
         if (in_array('seller', $exception->guards())) {
            return redirect()->guest(route('seller.login'));
+        } else {
+            return redirect()->guest(route('login'));
         }
     }
 }

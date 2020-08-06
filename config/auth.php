@@ -12,11 +12,13 @@ return [
     | as required, but they're a perfect start for most applications.
     |
     */
-
+    
+    
     'defaults' => [
-        'guard' => 'seller', // webから変更
+        'guard' => 'user', // webから変更
         'passwords' => 'users',
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -36,10 +38,12 @@ return [
     */
 
     'guards' => [
+        /*
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        */
         
         'api' => [
             'driver' => 'token',

@@ -12,7 +12,7 @@
     <header class="mb-4">
         <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
             {{-- トップページへのリンク --}}
-            <a class="navbar-brand" href="#">ECサイト(仮) 商品管理ページ</a>
+            <a class="navbar-brand" href="#">YNショッピングサイト 商品管理ページ</a>
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,9 @@
                 <ul class="navbar-nav mr-auto"></ul>
                 <ul class="navbar-nav">
                     {{-- ログアウト --}}
-                    <li class="nav-item">{!! link_to_route('seller.logout', 'ログアウト', [], ['class' => 'nav-link']) !!}</li>
+                    {!! Form::open(['route' => ['seller.logout'], 'method' => 'post']) !!}
+                        {!! Form::submit('ログアウト', ['class' => "btn btn-danger btn-block"]) !!}
+                    {!! Form::close() !!}
                 </ul>
             </div>
         </nav>

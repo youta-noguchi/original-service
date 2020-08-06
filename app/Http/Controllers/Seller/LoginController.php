@@ -73,9 +73,11 @@ class LoginController extends Controller
    public function logout(Request $request)
    {
        Auth::guard('seller')->logout();
+       
        $request->session()->flush();
        $request->session()->regenerate();
-
+       
+       
        return redirect('/');
    }
     

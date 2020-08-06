@@ -21,8 +21,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
-    public const SELLER_HOME = '/items';
+    public const HOME = '/';
+    public const SELLER_HOME = '/seller/items'; // seller用のパスを追加
     
 
     /**
